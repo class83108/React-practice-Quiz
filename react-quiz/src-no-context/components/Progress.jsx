@@ -1,8 +1,4 @@
-import { useQuiz } from "../context/QuizContext";
-
-function Progress() {
-  const { index, numQuestions, points, maxPossiblePoints, answer } = useQuiz();
-
+function Progress({ index, numQuestions, points, maxPossiblePoints, answer }) {
   return (
     <header className="progress">
       {/* 因為想要點擊時答案時，進度條就增加而不是到下一個問題才增加 */}
