@@ -102,41 +102,6 @@ function QuizProvider({ children }) {
       );
   }, []);
 
-  function start() {
-    dispatch({
-      type: "start",
-    });
-  }
-
-  function newAnswer(index) {
-    dispatch({
-      type: "newAnswer",
-      payload: index,
-    });
-  }
-
-  function tick() {
-    dispatch({ type: "tick" });
-  }
-
-  function nextQuestion() {
-    dispatch({
-      type: "nextQuestion",
-    });
-  }
-
-  function finish() {
-    dispatch({
-      type: "finish",
-    });
-  }
-
-  function restart() {
-    dispatch({
-      type: "restart",
-    });
-  }
-
   return (
     <QuizContext.Provider
       value={{
@@ -150,12 +115,7 @@ function QuizProvider({ children }) {
         numQuestions,
         initalPoint,
         maxPossiblePoints,
-        start,
-        newAnswer,
-        tick,
-        nextQuestion,
-        finish,
-        restart,
+        dispatch,
       }}
     >
       {children}
